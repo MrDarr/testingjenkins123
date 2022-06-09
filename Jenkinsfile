@@ -15,13 +15,16 @@ stage('Git CheckOut'){
     }
 }
 stage('terraform init'){
+   steps{
    sh '''cd ecr
 terraform init'''
-
+}
 }
 stage('Terraform plan'){
+steps{
     sh '''cd ecr
 terraform plan'''
+}
 }
 
 
