@@ -29,8 +29,10 @@ stage('Terraform init 2'){
     }
 }
 stage('Terraform plan2'){
+steps{
     sh '''cd other
 terraform plan'''
+}
 }
 }
 }
