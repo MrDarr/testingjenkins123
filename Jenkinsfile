@@ -20,13 +20,19 @@ stage('terraform init'){
 terraform init'''
 }
 }
-stage('Terraform plan'){
-steps{
-    sh '''cd ecr
-terraform plan'''
-}
-}
 
+#stage('Terraform plan'){
+#steps{
+ #   sh '''cd ecr
+#terraform plan'''
+#}
+#}
 
+stage('Terraform init'){
+    steps{
+         sh '''cd other
+         terraform init'''
+    }
+}
 }
 }
