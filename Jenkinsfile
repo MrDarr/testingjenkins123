@@ -43,8 +43,9 @@ terraform plan'''
 stage('Build image'){
     steps{
         script{
-          sh 'cd javacode'
+          
             app = docker.build("testingjenkins123/javacode")
+             sh 'cd javacode'
         }
     }
 }
