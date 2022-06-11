@@ -40,6 +40,13 @@ steps{
 terraform plan'''
 }
 }
+stage('Build image'){
+    steps{
+        script{
+            app = docker.build("spring-projects/spring-petclinic")
+        }
+    }
+}
 stage('image to ECR'){
     steps{
         sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 202467142321.dkr.ecr.us-east-1.amazonaws.com'
