@@ -44,7 +44,7 @@ stage('Build image'){
     steps{
         script{
           
-            app = docker.build("testingjenkins123/java_app/javacode")
+            app = docker.build("MrDarr/testingjenkins123")
            
         }
     }
