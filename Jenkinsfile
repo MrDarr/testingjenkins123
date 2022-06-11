@@ -21,6 +21,12 @@ terraform init'''
 }
 }
 
+    stage('Terraform plan'){
+        steps{
+          sh '''cd ecr
+         terraform plan'''
+       }
+    }
 
 stage('Terraform init 2'){
     steps{
