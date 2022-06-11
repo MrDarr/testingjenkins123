@@ -29,8 +29,10 @@ terraform init'''
     }
 
 stage('Terraform apply'){
+steps{
     sh '''cd ecr
 terraform apply --auto-approve'''
+}
 }
 stage('Terraform init 2'){
     steps{
@@ -45,8 +47,10 @@ terraform plan'''
 }
 }
 stage('Terraform apply second'){
+steps{
     sh '''cd other
 terraform apply --auto-approve'''
+}
 }
 stage('Build image'){
     steps{
