@@ -43,7 +43,7 @@ terraform plan'''
 stage('Build image'){
     steps{
         script{
-            app = docker.build("spring-projects/spring-petclinic")
+            app = docker.build("testingjenkins123/javacode")
         }
     }
 }
